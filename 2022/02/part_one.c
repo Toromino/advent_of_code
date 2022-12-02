@@ -48,7 +48,7 @@ unsigned int calculate_score(char a, char b) {
     return score;
 }
 
-int part_one() {
+void part_one() {
     FILE *file_ptr;
     unsigned int player_score = 0;
     char col_a, col_b; /* letters in the columns of the current line */
@@ -84,4 +84,5 @@ according to your strategy guide? %d\n", player_score);
 
 int main(int argc, char **argv) {
     part_one();
+    return 0;
 }

@@ -75,7 +75,7 @@ char strategic_response(char a, char b) {
     }
 }
 
-int part_two() {
+void part_two() {
     FILE *file_ptr;
     unsigned int player_score = 0;
     char col_a, col_b; /* letters in the columns of the current line */
@@ -112,4 +112,5 @@ strategy guide? %d\n", player_score);
 
 int main(int argc, char **argv) {
     part_two();
+    return 0;
 }
