@@ -64,7 +64,8 @@ void part_one() {
         if (c == '\n') {
             player_score += calculate_score(col_a, col_b);
             col_a = col_b = 0;
-        } else if ((c >= 'A' && c <= 'C') || (c >= 'X' && c <= 'Z')) {
+        } else if ((c >= OPPONENT_ROCK && c <= OPPONENT_SCISSORS) ||
+                   (c >= PLAYER_ROCK && c <= PLAYER_SCISSORS)) {
             if (last_c == ' ') {
                 col_b = c;
             } else {
@@ -84,5 +85,5 @@ according to your strategy guide? %d\n", player_score);
 
 int main(int argc, char **argv) {
     part_one();
-    return 0;
+    return EXIT_SUCCESS;
 }
